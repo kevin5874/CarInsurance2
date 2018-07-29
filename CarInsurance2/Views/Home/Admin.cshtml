@@ -1,0 +1,31 @@
+﻿@using CarInsurance2.Models;
+@model List<CustomerVM>
+
+<div class="row no-gutters m-3">
+    <div class="card col-sm-12 col-md-10 col-lg-6 mx-auto shadow">
+        <div class="card-header text-center">
+            <h5 class="m-0">Sign-Ups</h5>
+        </div>
+        <div class="card-body">
+            @foreach (var customer in Model)
+            {
+            <div class="row">
+                <div class="col">
+                    @customer.FName
+                </div>
+                <div class="col">
+                    @customer.LName
+                </div>
+                <div class="col">
+                    @customer.Email
+                </div>
+                <div class="col">
+                   $ @customer.price 
+                </div>
+            </div>
+            }
+
+
+        </div>
+    </div>
+</div>
